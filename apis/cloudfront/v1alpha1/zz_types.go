@@ -886,6 +886,10 @@ type Origin struct {
 }
 
 type OriginAccessIDentity struct {
+	// Origin access identity configuration. Send a GET request to the /CloudFront
+	// API version/CloudFront/identity ID/config resource.
+	CloudFrontOriginAccessIDentityConfig *OriginAccessIDentityConfig `json:"cloudFrontOriginAccessIDentityConfig,omitempty"`
+
 	ID *string `json:"id,omitempty"`
 
 	S3CanonicalUserID *string `json:"s3CanonicalUserID,omitempty"`
@@ -899,6 +903,8 @@ type OriginAccessIDentityConfig struct {
 
 type OriginAccessIDentityList struct {
 	IsTruncated *bool `json:"isTruncated,omitempty"`
+
+	Items []*OriginAccessIDentitySummary `json:"items,omitempty"`
 
 	Marker *string `json:"marker,omitempty"`
 
