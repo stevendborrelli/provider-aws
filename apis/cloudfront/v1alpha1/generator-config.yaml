@@ -12,3 +12,6 @@ ignore:
   field_paths:
     - DistributionConfig.CallerReference
     - Origins.Quantity
+    - CreateDistributionInput.DistributionConfig
+    - DeleteDistributionInput.DistributionConfig
+  
